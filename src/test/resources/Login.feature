@@ -31,7 +31,6 @@ Feature: Login scenarios
 
 
   @login
-
   Scenario Outline: Validate Login Functionality
     When User enter "<condition>" Credentials
     Then User gets "<condition>" errorMsg
