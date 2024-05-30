@@ -1,0 +1,8 @@
+[Android_samsung INFO ] 2024-05-30 10:34:27.548 ServerManager:20 - starting appium server
+[Android_samsung INFO ] 2024-05-30 10:34:33.561 ServerManager:29 - Appium server started
+[Android_samsung INFO ] 2024-05-30 10:34:33.576 DriverManager:26 - initializing Appium driver
+[Android_samsung INFO ] 2024-05-30 10:34:33.588 CapabilitiesManager:13 - getting capabilities
+[Android_samsung INFO ] 2024-05-30 10:34:33.592 CapabilitiesManager:30 - appUrl isC:\Users\PATAN MUNNA\Downloads\POS-4.10.5.150-13May2024-Staging_Sunmi.apk
+[Android_samsung INFO ] 2024-05-30 10:34:43.628 DriverManager:36 - Driver is initialized
+[Android_samsung INFO ] 2024-05-30 10:34:53.079 VideoManager:35 - video path: Android_samsung\Videos\Validate Login Functionality.mp4
+[Android_samsung INFO ] 2024-05-30 10:35:46.123 VideoManager:35 - video path: Android_samsung\Videos\Validate Login Functionality.mp4
