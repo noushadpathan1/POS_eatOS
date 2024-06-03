@@ -1,4 +1,4 @@
-@menuManagement
+@menuManagement @regression
 Feature: Menu Management
 
   @menu
@@ -8,7 +8,7 @@ Feature: Menu Management
     Then User gets errorMsg for "<condition>" Menu Details
     Examples:
       |       condition       |
-     |    ValidMenuDetails   |
+      |    ValidMenuDetails   |
       |    EmptyMenuName      |
       |    NumMenuName        |
 
@@ -18,7 +18,7 @@ Feature: Menu Management
     When User Search menu on Search Bar
     Then User Able to Search Item on Menu
 
-  @Category
+  @category
   Scenario Outline: Validate Category Details for Different <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Category details
@@ -30,13 +30,13 @@ Feature: Menu Management
       |    EmptyCategoryName  |
       |   InvalidCategoryName |
 
-  @search
+  @search @category
   Scenario: Verify Search functionality on Category
     Given User is on Menu management Screen
     When User Search Category on Search Bar
     Then User Able to Search Item on Category
 
-  @Modifiers
+  @modifiers
   Scenario Outline: Validate Modifiers Details for Different <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Modifiers details
@@ -47,7 +47,7 @@ Feature: Menu Management
       |    EmptyModifierName        |
       |    EmptyModifierOrderType   |
 
-  @search
+  @search @modifiers
   Scenario: Verify Search functionality on Modifiers
     Given User is on Menu management Screen
     When User Search Modifier on Search Bar
@@ -64,13 +64,13 @@ Feature: Menu Management
       |    EmptyAddonName       |
       |    EmptyAddonOrderType  |
 
-  @search
+  @search @Addons
   Scenario: Verify Search functionality on Addons
     Given User is on Menu management Screen
     When User Search Addons on Search Bar
     Then User Able to Search Item on Addons
 
-  @Products
+  @products
   Scenario Outline: Validate Products Details for Different "<condition>"
     Given User is on Menu management Screen
     When User adds "<condition>" Products details
@@ -81,13 +81,13 @@ Feature: Menu Management
       |   EmptyProductsName        |
       |   ExistingProductName      |
 
-  @search
+  @search @products
   Scenario: Verify Search functionality on Products
     Given User is on Menu management Screen
     When User Search Products on Search Bar
     Then User Able to Search Item on Products
 
-  @Ingredients
+  @ingredients
   Scenario Outline: Validate Ingredients Details for Different "<condition>"
     Given User is on Menu management Screen
     When User adds "<condition>" Ingredients details
@@ -98,13 +98,13 @@ Feature: Menu Management
       |   EmptyIngredientsName      |
       |   ExistingIngredientsName   |
 
-  @search
+  @search @ingredients
   Scenario: Verify Search functionality on Ingredients
     Given User is on Menu management Screen
     When User Search Ingredients on Search Bar
     Then User Able to Search Item on Ingredients
 
-  @Groups
+  @groups
   Scenario Outline: Validate Groups Details for Different "<condition>"
     Given User is on Menu management Screen
     When User adds "<condition>" Groups details
@@ -115,7 +115,7 @@ Feature: Menu Management
       |    EmptyGroupsName        |
       |    ExistingGroupsName     |
 
-  @search
+  @search @groups
   Scenario: Verify Search functionality on Groups
     Given User is on Menu management Screen
     When User Search Groups on Search Bar

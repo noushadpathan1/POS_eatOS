@@ -1,4 +1,4 @@
-@workforce @All
+@workforce @regression
 Feature: Workforce Feature
 
   @taxes

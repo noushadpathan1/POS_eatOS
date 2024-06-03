@@ -1,8 +1,60 @@
-[Android_samsung INFO ] 2024-05-30 10:34:27.548 ServerManager:20 - starting appium server
-[Android_samsung INFO ] 2024-05-30 10:34:33.561 ServerManager:29 - Appium server started
-[Android_samsung INFO ] 2024-05-30 10:34:33.576 DriverManager:26 - initializing Appium driver
-[Android_samsung INFO ] 2024-05-30 10:34:33.588 CapabilitiesManager:13 - getting capabilities
-[Android_samsung INFO ] 2024-05-30 10:34:33.592 CapabilitiesManager:30 - appUrl isC:\Users\PATAN MUNNA\Downloads\POS-4.10.5.150-13May2024-Staging_Sunmi.apk
-[Android_samsung INFO ] 2024-05-30 10:34:43.628 DriverManager:36 - Driver is initialized
-[Android_samsung INFO ] 2024-05-30 10:34:53.079 VideoManager:35 - video path: Android_samsung\Videos\Validate Login Functionality.mp4
-[Android_samsung INFO ] 2024-05-30 10:35:46.123 VideoManager:35 - video path: Android_samsung\Videos\Validate Login Functionality.mp4
+[Android_samsung INFO ] 2024-06-03 11:16:44.483 ServerManager:20 - starting appium server
+[Android_samsung INFO ] 2024-06-03 11:16:51.650 ServerManager:29 - Appium server started
+[Android_samsung INFO ] 2024-06-03 11:16:51.679 DriverManager:26 - initializing Appium driver
+[Android_samsung INFO ] 2024-06-03 11:16:51.705 CapabilitiesManager:13 - getting capabilities
+[Android_samsung INFO ] 2024-06-03 11:16:51.708 CapabilitiesManager:30 - appUrl isC:\Users\PATAN MUNNA\Downloads\POS-4.10.5.150-13May2024-Staging_Sunmi.apk
+[Android_samsung INFO ] 2024-06-03 11:17:02.617 DriverManager:36 - Driver is initialized
+[Android_samsung INFO ] 2024-06-03 11:21:05.136 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:21:06.762 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:21:44.266 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:21:45.422 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:22:13.605 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:22:14.965 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:22:42.418 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:22:44.142 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:23:10.936 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:23:12.124 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:23:17.861 BasePage:78 - CategoryNam
+[Android_samsung INFO ] 2024-06-03 11:23:40.968 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:23:42.664 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:24:11.463 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:24:12.643 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:24:18.166 BasePage:78 - CategoryName
+[Android_samsung INFO ] 2024-06-03 11:24:41.646 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:24:43.304 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:25:10.840 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:25:12.355 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:25:41.030 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:25:42.459 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:25:48.504 BasePage:78 - MenuName
+[Android_samsung INFO ] 2024-06-03 11:26:12.194 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:26:13.423 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:26:41.135 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:26:42.443 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:27:11.389 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:27:12.631 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:27:18.498 BasePage:78 - testAddOns
+[Android_samsung INFO ] 2024-06-03 11:27:41.996 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:27:43.167 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:28:10.336 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:28:11.593 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:28:40.967 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:28:42.632 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:28:49.203 BasePage:78 - testAddOns
+[Android_samsung INFO ] 2024-06-03 11:29:12.349 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:29:13.590 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:29:41.145 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:29:42.816 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:30:11.642 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:30:13.045 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:30:18.649 BasePage:78 - testIngredient
+[Android_samsung INFO ] 2024-06-03 11:30:42.364 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:30:43.964 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:31:11.739 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:31:13.232 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:31:41.728 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:31:43.154 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:31:48.875 BasePage:78 - testIngredient
+[Android_samsung INFO ] 2024-06-03 11:32:11.701 BasePage:61 - Click on Top Dropdown
+[Android_samsung INFO ] 2024-06-03 11:32:13.238 BasePage:61 - click on menu management
+[Android_samsung INFO ] 2024-06-03 11:39:28.588 BasePage:78 - testGuestBook

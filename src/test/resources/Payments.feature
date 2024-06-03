@@ -1,4 +1,4 @@
-@payments @All
+@payments @regression
 Feature: Payments
 
   @taxes

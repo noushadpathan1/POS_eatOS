@@ -1,4 +1,4 @@
-@login @All
+@loginModule @regression
 Feature: Login scenarios
 
   @createAnAccount
@@ -19,6 +19,7 @@ Feature: Login scenarios
       | allEmptyFields|
 
 
+    @login
   Scenario Outline: Validate Login Functionality
     When User enter "<condition>" Credentials
     Then User gets "<condition>" errorMsg
@@ -29,20 +30,6 @@ Feature: Login scenarios
       |    EmptyUsername    |
       |    EmptyPassword    |
 
-
-  @login
-
-  Scenario Outline: Validate Login Functionality
-    When User enter "<condition>" Credentials
-    Then User gets "<condition>" errorMsg
-    Examples:
-      |       condition     |
-      |    InvalidUsername  |
-#      |    InvalidPassword  |
-#      |    EmptyUsername    |
-#      |    EmptyPassword    |
-#      |    ValidCredentials |
-
   @sample
   Scenario Outline: Validate Login Functionality
     When User enter "<condition>" Credentials
@@ -52,14 +39,3 @@ Feature: Login scenarios
       |    EmptyFields      |
       |    ValidCredentials |
 
-
-
- # Scenario Outline: Validate Login Functionality with Valid PIN
-  #  When User enter username as "<username>"
-   # And User enter password as "<password>"
-    #And User Tap on Login Button
- #   And User enter valid Pin
-  #  Then User should get successfully loggedin
-   # Examples:
-    #  | username         | password      |
-     # | np3@eigital.com  | @Password123  |

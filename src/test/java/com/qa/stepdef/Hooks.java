@@ -27,7 +27,7 @@ public class Hooks {
             byte[] screenshot = new DriverManager().getDriver().getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
-        new VideoManager().stopRecording(scenario.getName());
+      //  new VideoManager().stopRecording(scenario.getName());
         BasePage basePage = new BasePage();
         //basePage.removeApp();
         basePage.closeApp();

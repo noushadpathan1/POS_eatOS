@@ -1,4 +1,4 @@
-@All
+@regression
 Feature: Restaurant
 
   @guestbook
