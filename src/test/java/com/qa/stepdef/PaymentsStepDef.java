@@ -33,6 +33,7 @@ public class PaymentsStepDef {
         new PaymentsScreen().validateSearchTax();
     }
 
+
     //---> Discounts
 
     @When("User adds {string} Discount details")

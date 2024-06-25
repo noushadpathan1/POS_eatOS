@@ -31,6 +31,7 @@ public class MenuManagementStepDef {
         new MenuManagementScreen().onMenuManagement();
     }
 
+
     //Menu
 
     @When("User adds {string} Menu details")
