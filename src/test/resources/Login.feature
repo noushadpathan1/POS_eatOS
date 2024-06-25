@@ -37,4 +37,5 @@ Feature: Login scenarios
       |       condition     |
       |    EmptyFields      |
       |    ValidCredentials |
+      |    SampleTest       |
 
