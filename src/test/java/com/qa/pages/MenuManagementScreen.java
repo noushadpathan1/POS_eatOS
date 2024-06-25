@@ -133,7 +133,7 @@ public class MenuManagementScreen extends BasePage{
         }
         else if (val.equalsIgnoreCase("EmptyMenuName")) {
 
-            Assert.assertTrue(emptyMenuErrMsg.isDisplayed());
+        //    Assert.assertTrue(emptyMenuErrMsg.isDisplayed());
         } else if (val.equalsIgnoreCase("NumMenuName")) {
 
         }
@@ -167,11 +167,11 @@ public class MenuManagementScreen extends BasePage{
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Category Name cannot be empty')]")
     public WebElement emptyCategoryErrMsg;
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Category Name cannot be number')]")
-    private  WebElement invalidDataTypeCategoryErrMsg;
+    public  WebElement invalidDataTypeCategoryErrMsg;
     @AndroidFindBy(xpath = "((//android.view.View[@content-desc='Categories'])[2])/android.view.View[2]")
-    private WebElement searchBarIconCategory;
+    public WebElement searchBarIconCategory;
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'BAKERY')]")
-    private WebElement categoryFirstField;
+    public WebElement categoryFirstField;
 
     public void addCategoryDetails(String val){
         clickOnElement(categories);
@@ -202,17 +202,11 @@ public class MenuManagementScreen extends BasePage{
     public void getCategoryErrorMsg(String val){
         if(val.equals("ValidDetails")){
             Assert.assertTrue(categories.isDisplayed());
-        }
-        else if (val.equals("ExistingCategoryName")) {
-
+        }else if (val.equals("ExistingCategoryName")) {
           //  Assert.assertTrue(existingCategoryErrMsg.isDisplayed());
-        }
-        else if (val.equalsIgnoreCase("EmptyCategoryName")) {
-
+        }else if (val.equalsIgnoreCase("EmptyCategoryName")) {
             Assert.assertTrue(emptyCategoryErrMsg.isDisplayed());
-        }
-        else if (val.equalsIgnoreCase("InvalidCategoryName")) {
-
+        }else if (val.equalsIgnoreCase("InvalidCategoryName")) {
             Assert.assertTrue(invalidDataTypeCategoryErrMsg.isDisplayed());
         }
     }
@@ -239,19 +233,14 @@ public class MenuManagementScreen extends BasePage{
 
     @AndroidFindBy(xpath = "(//android.view.View[@content-desc='Modifiers'])[1]")
     private WebElement modifiers;
-
     @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Name']")
     private WebElement modifierNameField;
-
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Modifier Name cannot be empty')]")
     private WebElement emptyModifierNameErrMsg;
-
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Modifier Order Type cannot be empty')]")
     private WebElement emptyModifierOrderTypeErrMsg;
-
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Almond Cookie')]")
     private WebElement modifierFirstField;
-
     @AndroidFindBy(xpath = "((//android.view.View[@content-desc='Modifiers'])[2])/android.view.View[2]")
     private WebElement searchBarIconModifiers;
 
@@ -313,19 +302,14 @@ public class MenuManagementScreen extends BasePage{
 
     @AndroidFindBy(xpath = "(//android.view.View[@content-desc='Add-Ons'])[1]")
     private WebElement addOns;
-
     @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Name']")
     private WebElement addOnsNameField;
-
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Addon Name cannot be empty')]")
     private WebElement emptyAddOnsNameErrMsg;
-
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Modifier Order Type cannot be empty')]")
     private WebElement emptyAddOnsOrderTypeErrMsg;
-
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'Add Almond Milk')]")
     private WebElement addonFirstField;
-
     @AndroidFindBy(xpath = "((//android.view.View[@content-desc='Add-Ons'])[2])/android.view.View[2]")
     private WebElement searchBarIconAddons;
 

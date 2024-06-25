@@ -83,8 +83,7 @@ public class WorkforceScreen extends BasePage {
             typeTextIntoElement(employeePhoneNumField,"7989877889");
             clickOnElement(employeeIDField);
             typeTextIntoElement(employeeIDField,"1122");
-        }
-        else if (val.equalsIgnoreCase("EmptyLastName")) {
+        } else if (val.equalsIgnoreCase("EmptyLastName")) {
             clickOnElement(employeeFirstNameField);
             typeTextIntoElement(employeeFirstNameField,"employee");
             clickOnElement(employeeEmailField);
@@ -132,7 +131,6 @@ public class WorkforceScreen extends BasePage {
             clickOnElement(employeeIDField);
             typeTextIntoElement(employeeIDField,"1122");
         }
-
     }
     public void taxesErrMsg(String val) {
         clickOnElement(paymentsScreen.SAVE);

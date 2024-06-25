@@ -1,14 +1,14 @@
-@menuManagement
+@menuManagement @regression
 Feature: Menu Management
 
   @menu
-  Scenario Outline: Validate Menu Details for Different "<condition>"
+  Scenario Outline: Validate Menu Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Menu details
     Then User gets errorMsg for "<condition>" Menu Details
     Examples:
       |       condition       |
-     |    ValidMenuDetails   |
+      |    ValidMenuDetails   |
       |    EmptyMenuName      |
       |    NumMenuName        |
 
@@ -18,8 +18,8 @@ Feature: Menu Management
     When User Search menu on Search Bar
     Then User Able to Search Item on Menu
 
-  @Category
-  Scenario Outline: Validate Category Details for Different <condition>
+  @category
+  Scenario Outline: Validate Category Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Category details
     Then User gets errorMsg for "<condition>" Category
@@ -30,14 +30,14 @@ Feature: Menu Management
       |    EmptyCategoryName  |
       |   InvalidCategoryName |
 
-  @search
+  @search @category
   Scenario: Verify Search functionality on Category
     Given User is on Menu management Screen
     When User Search Category on Search Bar
     Then User Able to Search Item on Category
 
-  @Modifiers
-  Scenario Outline: Validate Modifiers Details for Different <condition>
+  @modifiers
+  Scenario Outline: Validate Modifiers Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Modifiers details
     Then User gets errorMsg for "<condition>" Modifiers
@@ -47,14 +47,14 @@ Feature: Menu Management
       |    EmptyModifierName        |
       |    EmptyModifierOrderType   |
 
-  @search
+  @search @modifiers
   Scenario: Verify Search functionality on Modifiers
     Given User is on Menu management Screen
     When User Search Modifier on Search Bar
     Then User Able to Search Item on Modifier
 
   @Addons
-  Scenario Outline: Validate Addons Details for Different <condition>
+  Scenario Outline: Validate Addons Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Addons details
     Then User gets errorMsg for "<condition>" Addons
@@ -64,14 +64,14 @@ Feature: Menu Management
       |    EmptyAddonName       |
       |    EmptyAddonOrderType  |
 
-  @search
+  @search @Addons
   Scenario: Verify Search functionality on Addons
     Given User is on Menu management Screen
     When User Search Addons on Search Bar
     Then User Able to Search Item on Addons
 
-  @Products
-  Scenario Outline: Validate Products Details for Different "<condition>"
+  @products
+  Scenario Outline: Validate Products Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Products details
     Then User gets errorMsg for "<condition>" Products
@@ -81,14 +81,14 @@ Feature: Menu Management
       |   EmptyProductsName        |
       |   ExistingProductName      |
 
-  @search
+  @search @products
   Scenario: Verify Search functionality on Products
     Given User is on Menu management Screen
     When User Search Products on Search Bar
     Then User Able to Search Item on Products
 
-  @Ingredients
-  Scenario Outline: Validate Ingredients Details for Different "<condition>"
+  @ingredients
+  Scenario Outline: Validate Ingredients Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Ingredients details
     Then User gets errorMsg for "<condition>" Ingredients
@@ -98,14 +98,14 @@ Feature: Menu Management
       |   EmptyIngredientsName      |
       |   ExistingIngredientsName   |
 
-  @search
+  @search @ingredients
   Scenario: Verify Search functionality on Ingredients
     Given User is on Menu management Screen
     When User Search Ingredients on Search Bar
     Then User Able to Search Item on Ingredients
 
-  @Groups
-  Scenario Outline: Validate Groups Details for Different "<condition>"
+  @groups
+  Scenario Outline: Validate Groups Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Groups details
     Then User gets errorMsg for "<condition>" Groups
@@ -115,7 +115,7 @@ Feature: Menu Management
       |    EmptyGroupsName        |
       |    ExistingGroupsName     |
 
-  @search
+  @search @groups
   Scenario: Verify Search functionality on Groups
     Given User is on Menu management Screen
     When User Search Groups on Search Bar

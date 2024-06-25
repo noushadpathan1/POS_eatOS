@@ -1,8 +1,8 @@
-@login @All
+@loginModule @regression
 Feature: Login scenarios
 
   @createAnAccount
-  Scenario Outline: Create An Account With Negative Scenario
+  Scenario Outline: Create An Account With Negative Scenario : <condition>
     Given User opens the Applications
     And Tap on Create an Account
     When User enter "<condition>" in Create An Account screen
@@ -18,8 +18,8 @@ Feature: Login scenarios
       | restaurantName|
       | allEmptyFields|
 
-
-  Scenario Outline: Validate Login Functionality
+  @login
+  Scenario Outline: Validate Login Functionality : <condition>
     When User enter "<condition>" Credentials
     Then User gets "<condition>" errorMsg
     Examples:
@@ -29,22 +29,8 @@ Feature: Login scenarios
       |    EmptyUsername    |
       |    EmptyPassword    |
 
-
-  @login
-
-  Scenario Outline: Validate Login Functionality
-    When User enter "<condition>" Credentials
-    Then User gets "<condition>" errorMsg
-    Examples:
-      |       condition     |
-      |    InvalidUsername  |
-#      |    InvalidPassword  |
-#      |    EmptyUsername    |
-#      |    EmptyPassword    |
-#      |    ValidCredentials |
-
   @sample
-  Scenario Outline: Validate Login Functionality
+  Scenario Outline: Validate Login Functionality : <condition>
     When User enter "<condition>" Credentials
     Then User gets "<condition>" errorMsg
     Examples:
@@ -52,14 +38,3 @@ Feature: Login scenarios
       |    EmptyFields      |
       |    ValidCredentials |
 
-
-
- # Scenario Outline: Validate Login Functionality with Valid PIN
-  #  When User enter username as "<username>"
-   # And User enter password as "<password>"
-    #And User Tap on Login Button
- #   And User enter valid Pin
-  #  Then User should get successfully loggedin
-   # Examples:
-    #  | username         | password      |
-     # | np3@eigital.com  | @Password123  |
