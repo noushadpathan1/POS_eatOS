@@ -1,6 +1,7 @@
 package com.qa.pages;
 
 import com.qa.stepdef.MenuManagementStepDef;
+import com.qa.utils.PropertyManager;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -50,55 +51,72 @@ public class RestaurantScreen extends BasePage{
     // GuestBook
 
     @AndroidFindBy(xpath = "//android.view.View[@content-desc='Guestbook']")
-    private WebElement guestbook;
-
+    public WebElement guestbook;
     @AndroidFindBy(xpath = "//android.widget.EditText[@hint='Jhon']")
-    private WebElement guestbookNameField;
-
+    public WebElement guestbookNameField;
+    @AndroidFindBy(xpath = "//android.widget.EditText[contains(@hint,'4546566565')]")
+    public WebElement guestbookPhoneNumField;
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc=\"GuestBook\n" +
+            "Manage your guests and view their order history and Lifetime Value\"]/android.view.View[2]")
+    public WebElement guestbookSearchIcon;
+    @AndroidFindBy(xpath = "//android.widget.EditText[@hint=\"Search\"]")
+    public WebElement guestbookTypeTextIntoSearch;
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'first name')]")
-    private WebElement emptyGuestbookNameErrMsg;
-
+    public WebElement guestbookFirstNameErrMsg;
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'phone number')]")
-    private WebElement emptyGuestbookPhNumErrMsg;
-
+    public WebElement emptyGuestbookPhNumErrMsg;
     @AndroidFindBy(xpath = "//android.view.View[@bounds='[1638,279][1677,317]']")
-    private WebElement searchBarIconGuestbook;
-
-    @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'alex Jhonny')]")
-    private WebElement guestbookFirstField;
+    public WebElement searchBarIconGuestbook;
+    @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'guestOne')]")
+    public WebElement guestbookFirstField;
+    @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'guestOne')]/android.view.View")
+    public WebElement guestbookArchiveBtn;
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='1.  Please add Guest's Email or Phone number']")
+    public WebElement EmptyFirstNameAndPhNumErrMsg;
+    @AndroidFindBy(xpath = "//android.view.View[@content-desc='Archive']")
+    public WebElement guestbookArchive;
 
 
     public void addGuestBookDetails(String val){
         clickOnElement(guestbook);
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        threadSleep(1000);
         clickOnElement(menuManagement.ADD);
 
         switch (val) {
-            case "ValidGuestbookDetails" -> {
+            case "EmptyGuestbookDetails" -> {
                 clickOnElement(guestbookNameField);
-                typeTextIntoElement(guestbookNameField, "testGuestName");
+                clickOnElement(closeDialogRes);
             }
-            case "EmptyGuestbookName" -> clickOnElement(guestbookNameField);
-            case "EmptyGuestbookNum" -> {
+
+            case "MandatoryGuestbookDetails" -> {
                 clickOnElement(guestbookNameField);
-                typeTextIntoElement(guestbookNameField, "1234", "testGuestBook");
+                typeTextIntoElement(guestbookNameField, PropertyManager.getProperty("guestbookNameField"));
+                clickOnElement(guestbookPhoneNumField);
+                clickOnElement(guestbookPhoneNumField,PropertyManager.getProperty("guestbookPhoneNumField"));
+                clickOnElement(closeDialogRes);
+            }
+            case "SearchGuestbook" -> {
+                clickOnElement(guestbookSearchIcon);
+                typeTextIntoElement(guestbookTypeTextIntoSearch,PropertyManager.getProperty("guestbookNameField"));
+            }
+            case "ArchiveGuestbook" -> {
+                clickOnElement(guestbookSearchIcon);
+                typeTextIntoElement(guestbookTypeTextIntoSearch,PropertyManager.getProperty("guestbookNameField"));
+                waitForVisibility(guestbookFirstField);
+                clickOnElement(guestbookArchiveBtn);
+                clickOnElement(guestbookArchive);
             }
         }
-        clickOnElement(closeDialogRestaurant);
     }
     public void getGuestBookErrorMsg(String val){
-        if(val.equals("ValidGuestbookDetails")){
-
-        }
-        else if (val.equalsIgnoreCase("EmptyGuestbookName")) {
-            Assert.assertTrue(emptyGuestbookNameErrMsg.isDisplayed());
-        }
-        else if (val.equalsIgnoreCase("EmptyGuestbookNum")) {
-            //Assert.assertTrue(emptyGuestbookPhNumErrMsg.isDisplayed());
+        if(val.equals("EmptyGuestbookDetails")){
+            Assert.assertTrue(EmptyFirstNameAndPhNumErrMsg.isDisplayed());
+        }else if (val.equalsIgnoreCase("MandatoryGuestbookDetails")) {
+            Assert.assertTrue(guestbookFirstField.isDisplayed());
+        }else if (val.equalsIgnoreCase("SearchGuestbook")) {
+            Assert.assertTrue(guestbookFirstField.isDisplayed());
+        }else if (val.equalsIgnoreCase("ArchiveGuestbook")) {
+            Assert.assertTrue(guestbookFirstField.isDisplayed());
         }
     }
 

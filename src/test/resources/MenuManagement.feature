@@ -2,7 +2,7 @@
 Feature: Menu Management
 
   @menu
-  Scenario Outline: Validate Menu Details for Different "<condition>"
+  Scenario Outline: Validate Menu Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Menu details
     Then User gets errorMsg for "<condition>" Menu Details
@@ -19,7 +19,7 @@ Feature: Menu Management
     Then User Able to Search Item on Menu
 
   @category
-  Scenario Outline: Validate Category Details for Different <condition>
+  Scenario Outline: Validate Category Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Category details
     Then User gets errorMsg for "<condition>" Category
@@ -37,7 +37,7 @@ Feature: Menu Management
     Then User Able to Search Item on Category
 
   @modifiers
-  Scenario Outline: Validate Modifiers Details for Different <condition>
+  Scenario Outline: Validate Modifiers Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Modifiers details
     Then User gets errorMsg for "<condition>" Modifiers
@@ -54,7 +54,7 @@ Feature: Menu Management
     Then User Able to Search Item on Modifier
 
   @Addons
-  Scenario Outline: Validate Addons Details for Different <condition>
+  Scenario Outline: Validate Addons Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Addons details
     Then User gets errorMsg for "<condition>" Addons
@@ -71,7 +71,7 @@ Feature: Menu Management
     Then User Able to Search Item on Addons
 
   @products
-  Scenario Outline: Validate Products Details for Different "<condition>"
+  Scenario Outline: Validate Products Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Products details
     Then User gets errorMsg for "<condition>" Products
@@ -88,7 +88,7 @@ Feature: Menu Management
     Then User Able to Search Item on Products
 
   @ingredients
-  Scenario Outline: Validate Ingredients Details for Different "<condition>"
+  Scenario Outline: Validate Ingredients Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Ingredients details
     Then User gets errorMsg for "<condition>" Ingredients
@@ -105,7 +105,7 @@ Feature: Menu Management
     Then User Able to Search Item on Ingredients
 
   @groups
-  Scenario Outline: Validate Groups Details for Different "<condition>"
+  Scenario Outline: Validate Groups Details for Different : <condition>
     Given User is on Menu management Screen
     When User adds "<condition>" Groups details
     Then User gets errorMsg for "<condition>" Groups

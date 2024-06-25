@@ -8,7 +8,7 @@ Feature: Payments
     Then User gets errorMsg for "<condition>" Tax Details
     Examples:
       |       condition      |
-    # |    ValidTaxDetails   |
+      |    ValidTaxDetails   |
       |    EmptyTaxName      |
       |    EmptyTaxAmount    |
       |    EmptyAllFields    |

@@ -78,19 +78,16 @@ public class PaymentsScreen extends BasePage {
             typeTextIntoElement(taxNameField,"taxOne");
             clickOnElement(taxAmountField);
             typeTextIntoElement(taxAmountField,"1000");
-
         } else if (val.equalsIgnoreCase("EmptyTaxName")) {
-
             clickOnElement(taxAmountField);
             typeTextIntoElement(taxAmountField,"1000");
         } else if (val.equalsIgnoreCase("EmptyTaxAmount")) {
-
             clickOnElement(taxNameField);
             typeTextIntoElement(taxNameField,"taxOne");
         } else if (val.equalsIgnoreCase("EmptyAllFields")) {
-
             clickOnElement(taxNameField);
-        }clickOnElement(SAVE);
+        }
+        clickOnElement(SAVE);
     }
     public void taxesErrMsg(String val){
 

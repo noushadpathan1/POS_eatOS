@@ -7,10 +7,11 @@ Feature: Restaurant
     When User adds "<condition>" Guestbook details
     Then User gets errorMsg for "<condition>" Guestbook
     Examples:
-      |         condition          |
-    # |    ValidGuestbookDetails   |
-      |    EmptyGuestbookName      |
-      |    EmptyGuestbookNum       |
+      |     condition            |
+      | EmptyGuestbookDetails    |
+      | MandatoryGuestbookDetails|
+      | SearchGuestbook          |
+      | ArchiveGuestbook         |
 
   @search
   Scenario: Verify Search functionality on Guestbook

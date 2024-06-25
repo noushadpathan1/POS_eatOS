@@ -1,7 +1,7 @@
-@workforce @All
+@workforce @regression
 Feature: Workforce Feature
 
-  @taxes
+  @employee
   Scenario Outline: Create New Employee
     Given User is on Workforce Screen
     When User adds "<condition>" Employee details

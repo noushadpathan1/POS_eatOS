@@ -33,6 +33,13 @@ public class BasePage {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CommonUtils.WAIT));
         wait.until(ExpectedConditions.visibilityOf(e));
     }
+    public void threadSleep(int milliSec){
+        try {
+            Thread.sleep(milliSec);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
     public void longwaitForVisibility(WebElement e) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(CommonUtils.LongWAIT));
         wait.until(ExpectedConditions.visibilityOf(e));
@@ -51,6 +58,7 @@ public class BasePage {
         waitForVisibility(e);
         e.click();
     }
+
     public void clickOnElement1(WebElement element)  {
         WebElement webElement = waitForElement(element);
         webElement.click();

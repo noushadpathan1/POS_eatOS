@@ -2,7 +2,7 @@
 Feature: Login scenarios
 
   @createAnAccount
-  Scenario Outline: Create An Account With Negative Scenario
+  Scenario Outline: Create An Account With Negative Scenario : <condition>
     Given User opens the Applications
     And Tap on Create an Account
     When User enter "<condition>" in Create An Account screen
@@ -18,9 +18,8 @@ Feature: Login scenarios
       | restaurantName|
       | allEmptyFields|
 
-
-    @login
-  Scenario Outline: Validate Login Functionality
+  @login
+  Scenario Outline: Validate Login Functionality : <condition>
     When User enter "<condition>" Credentials
     Then User gets "<condition>" errorMsg
     Examples:
@@ -31,7 +30,7 @@ Feature: Login scenarios
       |    EmptyPassword    |
 
   @sample
-  Scenario Outline: Validate Login Functionality
+  Scenario Outline: Validate Login Functionality : <condition>
     When User enter "<condition>" Credentials
     Then User gets "<condition>" errorMsg
     Examples:

@@ -167,11 +167,11 @@ public class MenuManagementScreen extends BasePage{
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Category Name cannot be empty')]")
     public WebElement emptyCategoryErrMsg;
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc,'Category Name cannot be number')]")
-    private  WebElement invalidDataTypeCategoryErrMsg;
+    public  WebElement invalidDataTypeCategoryErrMsg;
     @AndroidFindBy(xpath = "((//android.view.View[@content-desc='Categories'])[2])/android.view.View[2]")
-    private WebElement searchBarIconCategory;
+    public WebElement searchBarIconCategory;
     @AndroidFindBy(xpath = "//android.view.View[contains(@content-desc, 'BAKERY')]")
-    private WebElement categoryFirstField;
+    public WebElement categoryFirstField;
 
     public void addCategoryDetails(String val){
         clickOnElement(categories);
@@ -202,17 +202,11 @@ public class MenuManagementScreen extends BasePage{
     public void getCategoryErrorMsg(String val){
         if(val.equals("ValidDetails")){
             Assert.assertTrue(categories.isDisplayed());
-        }
-        else if (val.equals("ExistingCategoryName")) {
-
+        }else if (val.equals("ExistingCategoryName")) {
           //  Assert.assertTrue(existingCategoryErrMsg.isDisplayed());
-        }
-        else if (val.equalsIgnoreCase("EmptyCategoryName")) {
-
+        }else if (val.equalsIgnoreCase("EmptyCategoryName")) {
             Assert.assertTrue(emptyCategoryErrMsg.isDisplayed());
-        }
-        else if (val.equalsIgnoreCase("InvalidCategoryName")) {
-
+        }else if (val.equalsIgnoreCase("InvalidCategoryName")) {
             Assert.assertTrue(invalidDataTypeCategoryErrMsg.isDisplayed());
         }
     }
